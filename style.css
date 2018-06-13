@@ -59,7 +59,7 @@ body {
 #crumbs ul li:last-child a:after {
   display: none; }
 
-.madaj #nav-profile-tab:after {
+.madaj #nav-service-tab:after {
   border-left-color: #fa5ba5; }
 
 #nav-home-tab {
@@ -67,7 +67,7 @@ body {
   #nav-home-tab:after {
     border-left-color: #fa5ba5 !important; }
 
-.madajj #nav-profile-tab:after {
+.madajj #nav-service-tab:after {
   border-left-color: #3498db !important; }
 
 .dosada {
@@ -125,12 +125,18 @@ body {
   #crumbs ul li a {
     width: 70px;
     padding: 15px 4px 25px 30px;
-    font-size: 10px; } }
+    font-size: 10px; }
+
+  h4 {
+    font-size: 20px; } }
 @media (min-width: 371px) and (max-width: 576px) {
   #crumbs ul li a {
     width: 100px;
     padding: 15px 4px 25px 30px;
-    font-size: 10px; } }
+    font-size: 10px; }
+
+  h4 {
+    font-size: 20px; } }
 @media (min-width: 576px) and (max-width: 991px) {
   #crumbs ul li a {
     width: 150px;
@@ -149,7 +155,10 @@ body {
     width: 250px; }
 
   #closeb {
-    left: 740px; } }
+    left: 740px; }
+
+  h4 {
+    font-size: 20px; } }
 @media (min-width: 1200px) {
   .modal-lg {
     width: 1100px;
@@ -167,5 +176,25 @@ body {
   height: 35px; }
 
 .edugmefix {
-  width: 160px;
+  width: 150px;
   height: 35px; }
+
+.aktivnodugme {
+  background-color: #fa5ba5;
+  color: floralwhite; }
+
+.mainb {
+  background-color: #f0f0f0;
+  margin-bottom: 4px; }
+
+.btn-group {
+  background-color: #f0f0f0;
+  margin-bottom: 5px; }
+
+.myshadow, .card, .calendar, .list-group {
+  -webkit-box-shadow: 0 1px 4px rgba(129, 138, 144, 0.3), 0 0 40px rgba(169, 169, 169, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(129, 138, 144, 0.3), 0 0 40px rgba(169, 169, 169, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(129, 138, 144, 0.3), 0 0 40px rgba(169, 169, 169, 0.1) inset; }
+
+.card {
+  border: none; }

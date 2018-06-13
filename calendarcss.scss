@@ -7,6 +7,8 @@ body {font-family: Verdana, sans-serif;}
   width: 100%;
   background: #3498DB;
   text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .month ul {
@@ -48,6 +50,9 @@ body {font-family: Verdana, sans-serif;}
   padding: 10px 0;
   background: #eee;
   margin: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
 }
 
 .days li {
