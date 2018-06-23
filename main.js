@@ -16,6 +16,7 @@ function Ekran465(x) {
     }
 }
 $(document).ready(function () {
+
     var x = window.matchMedia("(max-width: 330px)");
     Ekran330(x);
     x.addListener(Ekran330);
@@ -27,58 +28,22 @@ $(document).ready(function () {
 
     $('[data-toggle="tooltip"]').tooltip();
 
-    $("#userb").click(function () {
-        $("#guestb").collapse('hide');
-    });
-    $("#guestb").click(function () {
-        $("#usertab").collapse('hide');
-    });
-
     $("#studiob").click(function () {
-        $("#FHbuttons").collapse('hide');
+        $("#Fbuttons").collapse('hide');
+        $("#Hbuttons").collapse('hide');
     });
 
     $("#flatb").click(function () {
-        $('#FHbuttons').collapse('show');
+        $("#Hbuttons").collapse('hide');
+        // $('#Fbuttons').collapse('show');
     });
 
     $("#houseb").click(function () {
-        $('#FHbuttons').collapse('show');
+        $("#Fbuttons").collapse('hide');
+        // $('#Hbuttons').collapse('show');
+
     });
-
-
-    $("#Cbuttons").on('show.bs.collapse', function () {
-       $("#steamc").addClass('klik');
-    });
-    $("#Cbuttons").on('hide.bs.collapse', function () {
-        $("#steamc").removeClass('klik');
-    });
-
-    // $('[data-toggle="tooltip"]').tooltip();
-    // $("#hej").hover(function(){
-    //     $(this).css("background-color", "yellow");
-    // }, function(){
-    //     $(this).css("background-color", "pink");
-    // });
-
-    // $("#pills-profile-tab").click(function () {
-    //     if ($("#pills-profile-tab").hasClass("active")){
-    //     $("#pills-home-tab").addClass("active");
-    //     }
-    // });
 });
-
-
-
-function Klik(){
-    $(this).on('show.bs.collapse', function () {
-        $(this).addClass('aktivnodugme');
-    });
-    $(this).on('hide.bs.collapse', function () {
-        $(this).removeClass('aktivnodugme');
-    });
-}
-
 
 function CarpetsHide() {
     $("#Cbuttons").collapse('hide');
@@ -117,6 +82,49 @@ function OpenService2() {
 function OpenService3() {
     $("#nav-contact-tab").trigger("click");
 }
+
+// Active mainb
+$("#studiob, #flatb, #houseb, #noc, #hoov, #steamc").on("click", function () {
+    var btnklik = $(this);
+    btnklik.addClass('bactive');
+    btnklik.siblings().removeClass('bactive');
+});
+
+//Add counter
+$(".add").on("click", function () {
+    var  t = $(this);
+    t = t.siblings();
+    t = t[1];
+    var br = t.innerText;
+    var prop = br.substr(br.indexOf(' ')+1);//property name
+    br = br.substr(0,br.indexOf(' '));//counter
+    br++;
+    t.innerText = br + " " + prop;
+    console.log("Dodata soba " + br);
+});
+
+//Substract counter
+$(".sub").on("click", function () {
+    var  t = $(this);
+    t = t.siblings();
+    t = t[0];
+    var br = t.innerText;
+    var prop = br.substr(br.indexOf(' ')+1);//property name
+    br = br.substr(0,br.indexOf(' '));//counter
+    if( br == 0){
+        console.log("Cant go under 0!");
+    }
+    else{
+        br--;
+    }
+    if((br==0) && (prop=="Bedroom" || prop =="Bathroom" || prop == "Floor")){ //Bed, Bath and Floor cant be less then 1
+        br=1
+    }
+    t.innerText = br + " " + prop;
+    console.log("Oduzeta soba " + br);
+});
+
+
 
 
 

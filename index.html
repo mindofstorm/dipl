@@ -9,12 +9,8 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Material Design Bootstrap -->
-    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">-->
-
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="calendarcss.css">
-
 
     <title> Booking Plugin</title>
 </head>
@@ -62,14 +58,9 @@
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-date" role="tabpanel"
                              aria-labelledby="nav-home-tab">
-                            <!--<div class="row">-->
-                                <!--<div class="col">-->
-                                    <!---->
-                                <!--</div>-->
-                            <!--</div>-->
                             <div class="row mt-1 ml-1 mr-1">
                                 <div class="col-lg-8 mb-4">
-                                    <h4 class="mb-2">Choose a Date</h4>
+                                    <h4 class="mb-3">Choose a Date</h4>
                                     <div class="calendar">
                                         <div class="month">
                                             <ul>
@@ -127,13 +118,13 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="col-lg-4 mb-3">
+                                <div class="col-lg-4 mb-3 mt-1">
                                     <h4 class="mb-3">Choose a Time Slot</h4>
                                     <div class="card align-middle">
                                         <div class="card-header text-center">
                                             <span class="float-left"> &#10094;</span>
-                                             10th of August
-                                            <span class="float-right"> &#10095;</span>                                        </div>
+                                            10th of August
+                                            <span class="float-right"> &#10095;</span></div>
                                         <ul class="list-group myshadow">
                                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                                 08:00 - 09:00
@@ -143,10 +134,6 @@
                                                 08:00 - 09:00
                                                 <span class="badge"
                                                       style="background-color: #FA5BA5; color: floralwhite;"> $5 </span>
-                                            </li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                                08:00 - 09:00
-                                                <span class="badge badge-info"> $5</span>
                                             </li>
                                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                                 08:00 - 09:00
@@ -194,73 +181,159 @@
                                             <h5 class="d-flex">
                                                 <span class="text-muted">Tell us about your place?</span>
                                             </h5>
-                                            <button  id="studiob" class="btn mainb" type="button"
+                                            <button id="studiob" class="btn mainb" type="button"
                                                     aria-controls="Studio">
                                                 Studio
                                             </button>
 
-                                            <button id="flatb" class="btn mainb" type="button" aria-expanded="false"
+                                            <button id="flatb" class="btn mainb" type="button" data-toggle="collapse" data-target="#Fbuttons" aria-expanded="false"
                                                     aria-controls="Flat">
                                                 Flat
                                             </button>
 
-                                            <button id="houseb" class="btn mainb" type="button" aria-expanded="false"
+                                            <button id="houseb" class="btn mainb" type="button" data-toggle="collapse" data-target="#Hbuttons" aria-expanded="false"
                                                     aria-controls="House">
                                                 House
                                             </button>
-                                            <div class="collapse" id="FHbuttons">
+                                            <div class="collapse" id="Fbuttons">
                                                 <div class="card card-body mt-2">
                                                     <div class="row">
-                                                    <div class="col-12 col-lg-6 col-xl-12">
-                                                    <div class="btn-toolbar" role="toolbar"
-                                                         aria-label="Toolbar buttons for property addons l1">
-                                                        <div class="btn-group btn-group-sm mr-2 mb-1" role="group"
-                                                             aria-label="bedroom filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">1 Bedroom</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
+                                                        <div class="col-12 col-lg-6 col-xl-12">
+                                                            <div class="btn-toolbar" role="toolbar"
+                                                                 aria-label="Toolbar buttons for property addons l1">
+                                                                <div class="btn-group btn-group-sm mr-2 mb-1"
+                                                                     role="group"
+                                                                     aria-label="bedroom filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button id="bed" class="btn edugmefix">1 Bedroom</button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                                <div class="btn-group btn-group-sm mr-2 mb-1"
+                                                                     role="group"
+                                                                     aria-label="bathroom filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">1 Bathroom</button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                                <div class="btn-group btn-group-sm" role="group"
+                                                                     aria-label="floor filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">1 Floor</button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="btn-group btn-group-sm mr-2 mb-1" role="group"
-                                                             aria-label="bathroom filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">1 Bathroom</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
+                                                        <div class="col-12 col-lg-6 col-xl-12">
+                                                            <div class="btn-toolbar" role="toolbar"
+                                                                 aria-label="Toolbar buttons for property addons l2">
+                                                                <div class="btn-group btn-group-sm mr-2 mb-1"
+                                                                     role="group"
+                                                                     aria-label="bedroom filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 Toilet</button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                                <div class="btn-group btn-group-sm mr-2 mb-1"
+                                                                     role="group"
+                                                                     aria-label="bathroom filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 Utility room
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                                <div class="btn-group btn-group-sm" role="group"
+                                                                     aria-label="floor filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 Office</button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                        <div class="btn-group btn-group-sm" role="group"
-                                                             aria-label="floor filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">1 Floor</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
-                                                        </div>
-                                                    </div>
-                                                    </div>
-                                                    <div class="col-12 col-lg-6 col-xl-12">
-                                                    <div class="btn-toolbar" role="toolbar"
-                                                         aria-label="Toolbar buttons for property addons l2">
-                                                        <div class="btn-group btn-group-sm mr-2 mb-1" role="group"
-                                                             aria-label="bedroom filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">0 Toilet</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
-                                                        </div>
-                                                        <div class="btn-group btn-group-sm mr-2 mb-1" role="group"
-                                                             aria-label="bathroom filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">0 Utility room</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
-                                                        </div>
-                                                        <div class="btn-group btn-group-sm" role="group"
-                                                             aria-label="floor filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">0 Office</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
-                                                        </div>
-                                                    </div>
-                                                    </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        <hr>
+                                            <div class="collapse" id="Hbuttons">
+                                                <div class="card card-body mt-2">
+                                                    <div class="row">
+                                                        <div class="col-12 col-lg-6 col-xl-12">
+                                                            <div class="btn-toolbar" role="toolbar"
+                                                                 aria-label="Toolbar buttons for property addons l1">
+                                                                <div class="btn-group btn-group-sm mr-2 mb-1"
+                                                                     role="group"
+                                                                     aria-label="bedroom filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">1 Bedroom</button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                                <div class="btn-group btn-group-sm mr-2 mb-1"
+                                                                     role="group"
+                                                                     aria-label="bathroom filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">1 Bathroom</button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                                <div class="btn-group btn-group-sm" role="group"
+                                                                     aria-label="floor filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">1 Floor</button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 col-lg-6 col-xl-12">
+                                                            <div class="btn-toolbar" role="toolbar"
+                                                                 aria-label="Toolbar buttons for property addons l2">
+                                                                <div class="btn-group btn-group-sm mr-2 mb-1"
+                                                                     role="group"
+                                                                     aria-label="bedroom filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 Toilet</button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                                <div class="btn-group btn-group-sm mr-2 mb-1"
+                                                                     role="group"
+                                                                     aria-label="bathroom filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 Utility room
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                                <div class="btn-group btn-group-sm" role="group"
+                                                                     aria-label="floor filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 Office</button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
                                         </div>
                                     </div>
                                     <div class="row mb-2">
@@ -272,7 +345,8 @@
                                                     aria-controls="No Carpets">
                                                 No Carpets
                                             </button>
-                                            <button id="hoov" class="btn mainb" type="button" aria-expanded="false" onclick="CarpetsHide();"
+                                            <button id="hoov" class="btn mainb" type="button" aria-expanded="false"
+                                                    onclick="CarpetsHide();"
                                                     aria-controls="Hoovered">
                                                 Hoovered
                                             </button>
@@ -287,15 +361,15 @@
                                                          aria-label="Toolbar buttons for property addons l1">
                                                         <div class="btn-group btn-group-sm mr-2" role="group"
                                                              aria-label="carpets filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
+                                                            <button type="button" class="btn btn-secondary sub">-</button>
                                                             <button class="btn edugmefix">0 Carpets</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
+                                                            <button type="button" class="btn btn-secondary add">+</button>
                                                         </div>
                                                         <div class="btn-group btn-group-sm mr-2" role="group"
                                                              aria-label="rugs filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
+                                                            <button type="button" class="btn btn-secondary sub">-</button>
                                                             <button class="btn edugmefix">0 Rugs</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
+                                                            <button type="button" class="btn btn-secondary add">+</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -308,8 +382,9 @@
                                             <h5 class="d-flex">
                                                 <span class="text-muted">Would you like any upholstery to be cleaned?</span>
                                             </h5>
-                                            <button id="upholsteryb" class="btn mainb" type="button" data-toggle="collapse"
-                                                    data-target="#Ubuttons"  aria-expanded="false"
+                                            <button id="upholsteryb" class="btn mainb" type="button"
+                                                    data-toggle="collapse"
+                                                    data-target="#Ubuttons" aria-expanded="false"
                                                     aria-controls="Upholstery">
                                                 Upholstery
                                             </button>
@@ -317,50 +392,66 @@
                                                 <div class="card card-body mt-2">
                                                     <div class="row">
                                                         <div class="col-12 col-lg-6 col-xl-12">
-                                                           <div class="btn-toolbar" role="toolbar"
-                                                         aria-label="Toolbar buttons for property addons l1">
-                                                        <div class="btn-group btn-group-sm mr-2 mb-1" role="group"
-                                                             aria-label="bedroom filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">0 Single Mattress</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
-                                                        </div>
-                                                        <div class="btn-group btn-group-sm mr-2" role="group"
-                                                             aria-label="bathroom filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">0 Double Mattress</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
-                                                        </div>
-                                                        <div class="btn-group btn-group-sm" role="group"
-                                                             aria-label="floor filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">0 Sofa</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
-                                                        </div>
-                                                    </div>
+                                                            <div class="btn-toolbar" role="toolbar"
+                                                                 aria-label="Toolbar buttons for property addons l1">
+                                                                <div class="btn-group btn-group-sm mr-2 mb-1"
+                                                                     role="group"
+                                                                     aria-label="bedroom filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 Single Mattress
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                                <div class="btn-group btn-group-sm mr-2" role="group"
+                                                                     aria-label="bathroom filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 Double Mattress
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                                <div class="btn-group btn-group-sm" role="group"
+                                                                     aria-label="floor filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 Sofa</button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <div class="col-12 col-lg-6 col-xl-12">
                                                             <div class="btn-toolbar" role="toolbar"
-                                                         aria-label="Toolbar buttons for property addons l2">
-                                                        <div class="btn-group btn-group-sm mr-2" role="group"
-                                                             aria-label="bedroom filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">0 Double l.curtain</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
-                                                        </div>
-                                                        <div class="btn-group btn-group-sm mr-2" role="group"
-                                                             aria-label="bathroom filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">0 1/2 Curtain</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
-                                                        </div>
-                                                        <div class="btn-group btn-group-sm" role="group"
-                                                             aria-label="floor filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">0 Armchair</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
-                                                        </div>
-                                                    </div>
+                                                                 aria-label="Toolbar buttons for property addons l2">
+                                                                <div class="btn-group btn-group-sm mr-2" role="group"
+                                                                     aria-label="bedroom filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 Double l.curtain
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                                <div class="btn-group btn-group-sm mr-2" role="group"
+                                                                     aria-label="bathroom filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 1/2 Curtain</button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                                <div class="btn-group btn-group-sm" role="group"
+                                                                     aria-label="floor filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 Armchair</button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -383,49 +474,63 @@
                                                     <div class="row">
                                                         <div class="col-12 col-lg-6 col-xl-12">
                                                             <div class="btn-toolbar" role="toolbar"
-                                                         aria-label="Toolbar buttons for property addons l1">
-                                                        <div class="btn-group btn-group-sm mr-2" role="group"
-                                                             aria-label="bedroom filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">0 Double Oven</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
-                                                        </div>
-                                                        <div class="btn-group btn-group-sm mr-2" role="group"
-                                                             aria-label="bathroom filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">0 Double Fridge</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
-                                                        </div>
-                                                        <div class="btn-group btn-group-sm" role="group"
-                                                             aria-label="floor filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">0 Blinds</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
-                                                        </div>
-                                                    </div>
+                                                                 aria-label="Toolbar buttons for property addons l1">
+                                                                <div class="btn-group btn-group-sm mr-2" role="group"
+                                                                     aria-label="bedroom filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 Double Oven</button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                                <div class="btn-group btn-group-sm mr-2" role="group"
+                                                                     aria-label="bathroom filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 Double Fridge
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                                <div class="btn-group btn-group-sm" role="group"
+                                                                     aria-label="floor filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 Blinds</button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <div class="col-12 col-lg-6 col-xl-12">
                                                             <div class="btn-toolbar" role="toolbar"
-                                                         aria-label="Toolbar buttons for property addons l2">
-                                                        <div class="btn-group btn-group-sm mr-2" role="group"
-                                                             aria-label="bedroom filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">0 Win. external</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
-                                                        </div>
-                                                        <div class="btn-group btn-group-sm mr-2" role="group"
-                                                             aria-label="bathroom filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">0 Glass door</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
-                                                        </div>
-                                                        <div class="btn-group btn-group-sm" role="group"
-                                                             aria-label="floor filter">
-                                                            <button type="button" class="btn btn-secondary">-</button>
-                                                            <button class="btn edugmefix">0 Balcony</button>
-                                                            <button type="button" class="btn btn-secondary">+</button>
-                                                        </div>
-                                                    </div>
+                                                                 aria-label="Toolbar buttons for property addons l2">
+                                                                <div class="btn-group btn-group-sm mr-2" role="group"
+                                                                     aria-label="bedroom filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 Win. external
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                                <div class="btn-group btn-group-sm mr-2" role="group"
+                                                                     aria-label="bathroom filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 Glass door</button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                                <div class="btn-group btn-group-sm" role="group"
+                                                                     aria-label="floor filter">
+                                                                    <button type="button" class="btn btn-secondary sub">-
+                                                                    </button>
+                                                                    <button class="btn edugmefix">0 Balcony</button>
+                                                                    <button type="button" class="btn btn-secondary add">+
+                                                                    </button>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -582,7 +687,8 @@
                                             </div>
                                             <div class="col-md-6 mb-4">
                                                 <label for="phone"> Phone number</label>
-                                                <input type="tel" class="form-control" id="phone" placeholder="+44 555 555">
+                                                <input type="tel" class="form-control" id="phone"
+                                                       placeholder="+44 555 555">
                                                 <div class="invalid-feedback">
                                                     Please enter a valid phone number.
                                                 </div>
@@ -637,11 +743,14 @@
                                         <hr class="mb-4">
                                         <div class="custom-control custom-checkbox">
                                             <input type="checkbox" class="custom-control-input" id="key-pickup">
-                                            <label class="custom-control-label" for="key-pickup">Key pick up needed?</label>
+                                            <label class="custom-control-label" for="key-pickup">Key pick up
+                                                needed?</label>
                                         </div>
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="save-info" data-toggle="collapse" data-target="#keypick">
-                                            <label class="custom-control-label" for="save-info">Key pick up address NOT same as property address?</label>
+                                            <input type="checkbox" class="custom-control-input" id="save-info"
+                                                   data-toggle="collapse" data-target="#keypick">
+                                            <label class="custom-control-label" for="save-info">Key pick up address NOT
+                                                same as property address?</label>
                                         </div>
 
                                         <div id="keypick" class="collapse mt-3" aria-expanded="true">
@@ -690,7 +799,8 @@
                                             </div>
                                         </div>
                                         <hr class="mb-4">
-                                        <label for="addcomment" class="text-muted">Is there anything else you'd like us to know?</label>
+                                        <label for="addcomment" class="text-muted">Is there anything else you'd like us
+                                            to know?</label>
                                         <textarea id="addcomment" class="form-control mb-3">
                                         </textarea>
                                         <button class="btn btn-primary btn-lg btn-block" type="submit">Confirm Booking
@@ -708,24 +818,21 @@
 </div>
 
 <div class="container">
-    <button id="bookb" class="btn" type="button" data-toggle="modal" data-target="#bookingModal"> Book Now</button>
-    <button type="button" class="btn btn-success btn-sm dosada">
-        <span aria-hidden="true">&times;</span>
-        <!--<i class="fa fa-window-close"></i>-->
-    </button>
+    <div class="center">
+        <button id="bookb" class="btn" type="button" data-toggle="modal" data-target="#bookingModal"> Book Now</button>
+    </div>
 </div>
 
-
-<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
 <script src="bootstrap-4.1.1-dist/jquery.min.js"></script>
 <script src="bootstrap-4.1.1-dist/js/bootstrap.min.js"></script>
-<!-- MDB core JavaScript -->
-<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>-->
 <script src="bootstrap-4.1.1-dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
 <script src="main.js"></script>
 
+<script>
+
+</script>
 </body>
 </html>
